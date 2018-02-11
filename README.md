@@ -1,2 +1,2 @@
 # Algorithms
-This consist  C code for all the important and basic algorithms  
+This repo consist C code for all the important and basic algorithms  
