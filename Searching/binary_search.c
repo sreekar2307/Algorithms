@@ -1,5 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+int * sorted_array(int *A){
+  for(int i=0;i<n;i++){
+    for(int j=i+1;j<n;j++){
+       if(A[i]>A[j]){
+        int temp = A[i];
+        A[i] = A[j];
+        A[j]=temp;
+       }
+    }
+  }
+ return A;
+}
 int binarySearch(int *A,int l,int u,int key){
    if(l<=u){
    int mid = (l+u)/2;
