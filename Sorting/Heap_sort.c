@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*BUILDING MAX HEAP*/
 int Max_and_Swap(int A[],int i,int size){
  int max = i,temp;
  if(A[max]<A[2*i+1])
