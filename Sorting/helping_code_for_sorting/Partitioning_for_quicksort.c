@@ -5,13 +5,6 @@ int main()
   int A[] = {20,11,7,5,12,6,15,13};
   int pointer_r=0,pointer_s=0,pointer_t=sizeof(A)/sizeof(int),pivot=20;
   int flag,count=1;
-  for(int i=7;i>=0;i--)
-  {
-      if(A[i]>pivot)
-        pointer_t--;
-      else
-        break;
-  }
   while(pointer_s<pointer_t){
     if(A[pointer_s]==pivot)
    {
@@ -49,7 +42,6 @@ int main()
         A[pointer_t]=flag;
       }
    }
-   printf("%d %d %d\n",pointer_r,pointer_s,pointer_t);
   }
   printf("\n");
   for(int i=0;i<sizeof(A)/sizeof(int);i++)
