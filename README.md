@@ -1,3 +1,2 @@
 # Algorithms
-This repo consist C code for all the important and basic algorithms  
-Changes made
+This repo consist of either in C or java code for all the important and basic algorithms  
