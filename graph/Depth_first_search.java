@@ -29,6 +29,7 @@ public class Depth_first_search {
 		 {
 			 if(!vertices[i].color) {
 				 System.out.printf("Detected non_connected component\n");
+				 flag=true;
 				 depth_First_search(i,vertices,no_of_nodes);
 			 }
 			 i++;
