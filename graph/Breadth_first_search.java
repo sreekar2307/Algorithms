@@ -33,6 +33,7 @@ public class Breadth_first_search {
 		 System.out.println("Select source Node");
 		 int source = scan.nextInt();	
 		 Q.enqueue(source);
+		 vertices[source].Leaps_from_parent=0;
 		vertices[source].color=true;
 		 breath_first_search(source,vertices,no_of_nodes);
 		for(int i=0;i<no_of_nodes;i++)
@@ -40,7 +41,8 @@ public class Breadth_first_search {
 			
 			if(!vertices[i].color)
 			{
-				System.out.println("Disconnected component");
+				System.out.println("Disconnected component source changed to "+i);
+				vertices[i].Leaps_from_parent=0;
 				breath_first_search(i,vertices,no_of_nodes);
 			}
 		}
@@ -52,9 +54,11 @@ static void breath_first_search(int v,graph_node A[],int no_of_nodes) {
 		{
 			Q.enqueue(A[v].ajacent_edges.get(i).vertex_no);
 			A[A[v].ajacent_edges.get(i).vertex_no].color=true;
+			A[A[v].ajacent_edges.get(i).vertex_no].Leaps_from_parent =A[v].Leaps_from_parent+1;
 		}
 	}
-	System.out.print(Q.dequeue()+" ");
+	int temp =Q.dequeue();
+	System.out.println(temp+" Leaps from source "+A[temp].Leaps_from_parent);
 	if(!Q.Isempty())
 	breath_first_search(Q.getTop(),A,no_of_nodes);
  }
