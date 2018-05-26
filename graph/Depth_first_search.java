@@ -58,6 +58,7 @@ public class Depth_first_search {
 				System.out.println("back edge from "+v+" to "+A[v].ajacent_edges.get(k).vertex_no);
 			}
 		}
+                time++;
 		A[v].out_time=time;
 		 	  
    }
