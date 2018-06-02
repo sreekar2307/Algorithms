@@ -4,6 +4,7 @@ class graph_node{
 	  int vertex;
 	  boolean color=false;
 	  int vertex_parent=-1;
+	  int Leaps_from_parent;
 	  int in_time=0;
 	  int out_time=0;
 	  ArrayList<temp> ajacent_edges = new ArrayList<temp>();
