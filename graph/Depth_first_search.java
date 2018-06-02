@@ -41,6 +41,7 @@ public class Depth_first_search {
 			 }
 			 i++;
 		 }
+	DFS_tree(vertices,no_of_nodes); 
 }
 	static void depth_First_search(int v,graph_node A[],int no_of_nodes){
 		time++;
@@ -61,4 +62,15 @@ public class Depth_first_search {
 		A[v].out_time=time;
 		 	  
    }
+	 static void DFS_tree(graph_node A[],int no_of_nodes) {
+		 System.out.println();
+	 for(int i=0;i<no_of_nodes;i++)
+		 {
+			 if(A[i].vertex_parent!=-1)
+			 System.out.println("Parent of vertex "+i+" is "+A[i].vertex_parent +" IN_time is "+A[i].in_time+" OUT_time is "+A[i].out_time);
+			 else
+				 System.out.println(i+" is a root node"+" IN_time is "+A[i].in_time+" OUT_time is "+A[i].out_time);	 
+		 }
+		 
+	 }
 }
