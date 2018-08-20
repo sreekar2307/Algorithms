@@ -6,9 +6,6 @@ public class Bellmanford {
 
 	public static void main(String[] args) {
 		int no_of_nodes=4;
-		 graph_node vertices[] = new graph_node[no_of_nodes];
-		 for(int i=0;i<no_of_nodes;i++)
-			 vertices[i]= new graph_node(i);
 		   LinkedList<edgelist_node> edgeList =new LinkedList<edgelist_node>();
 		   	 
  
